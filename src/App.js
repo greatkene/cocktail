@@ -7,7 +7,7 @@ import About from './pages/About'
 import Cocktail from './pages/Cocktail'
 import SingleCocktail from './pages/SingleCocktail'
 import Error from './pages/Error'
-import Contact from './pages/Contact'
+import Ticket from './pages/Ticket'
 
 // Import components
 import Navbar from './components/Navbar';
@@ -21,7 +21,7 @@ const App = () => {
         <Route path='/about' element={<About/>}/>
         <Route path='/cocktail' element={<Cocktail/>}/>
         <Route path='/cocktail/:id' element={<SingleCocktail/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/ticket' element={<Ticket/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
     </BrowserRouter>

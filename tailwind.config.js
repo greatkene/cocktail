@@ -3,7 +3,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Poppins: "Poppins",
+      },
+      colors : {
+        primary: "#3E82FC"
+      },
+    },
   },
   plugins: [],
 }

@@ -1,11 +1,68 @@
-import React from 'react'
+/* eslint-disable no-unused-vars */
+import React, {useState} from 'react'
 import logo from '../assets/logo.png'
 import {Link as Link1} from 'react-scroll'
 import { Link as Link2 } from 'react-router-dom'
+import {FaBars, FaTimes} from 'react-icons/fa'
 
 const Navbar = () => {
+    
+    const [openMobile, setOpenMobile] = useState(false)
+
   return (
-    <div>Navbar</div>
+    <nav className='flex justify-between py-4 md:px-24 px-4'>
+        <img src={logo} alt="logo" className='h-16 cursor-pointer' />
+        <ul className='font-medium text-lg md:flex hidden items-center gap-8 cursor-pointer'>
+            <li>
+                <Link1 to="home" spy={true} smooth={true}>Home</Link1>
+            </li>
+            <li>
+                <Link2 to="/about">About</Link2>
+            </li>
+            <li>
+                <Link1 to="attract" spy={true} smooth={true}>Attractions</Link1>
+            </li>
+            <li>
+                <Link1 to="services" spy={true} smooth={true}>Services</Link1>
+            </li>
+            <li>
+                <Link2 to="/cocktail">Cocktail</Link2>
+            </li>
+            <li>
+                <Link2 to="/ticket">Tickets</Link2>
+            </li>
+        </ul>
+
+        {/*Mobile Nav*/}
+        <ul className={`fixed top-0 z-50 bg-white w-2/4 h-screen shadow-2xl md:hidden
+        flex flex-col gap-10 p-7 pt-20 duration-500 ${openMobile ? 'right-0' : 'right-[-100%]'}`}>
+            <li>
+                <Link1 to="home" spy={true} smooth={true}>Home</Link1>
+            </li>
+            <li>
+                <Link2 to="/about">About</Link2>
+            </li>
+            <li>
+                <Link1 to="attract" spy={true} smooth={true}>Attractions</Link1>
+            </li>
+            <li>
+                <Link1 to="services" spy={true} smooth={true}>Services</Link1>
+            </li>
+            <li>
+                <Link2 to="/cocktail">Cocktail</Link2>
+            </li>
+            <li>
+                <Link2 to="/ticket">Tickets</Link2>
+            </li>
+        </ul>
+
+        <div className="md:hidden my-4 text-2xl z-50" onClick={()=>setOpenMobile(!openMobile)}>
+            {
+                openMobile ? <FaTimes/> : <FaBars/>
+            }
+        </div>
+        
+    </nav>
   )
 }
 
