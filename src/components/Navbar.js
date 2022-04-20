@@ -28,8 +28,11 @@ const Navbar = () => {
 
   return (
     <nav className={navBackground ? 'navbar active' : 'navbar'} role='navigation'>
-        <img src={logo} alt="logo" className='h-10 cursor-pointer' />
-        <ul className='font-medium text-white text-lg md:flex hidden items-center gap-8 cursor-pointer'>
+        <img src={logo} alt="logo" className='h-12 cursor-pointer' />
+        <ul className={
+            navBackground ? 'font-medium text-black text-lg md:flex hidden items-center gap-8 cursor-pointer' 
+            : 'font-medium text-white text-lg md:flex hidden items-center gap-8 cursor-pointer'
+        }>
             <li>
                 <Link1 to="/" spy={true} smooth={true}>Home</Link1>
             </li>
@@ -79,7 +82,7 @@ const Navbar = () => {
             </div>
         </ul>
 
-        <div className={navBackground ? 'md:hidden text-black my-2 text-2xl z-50 cursor-pointer' :
+        <div className={navBackground ? 'md:hidden text-black my-3 text-2xl z-50 cursor-pointer' :
             'md:hidden text-white my-2 text-2xl z-50 cursor-pointer'} onClick={()=>setOpenMobile(!openMobile)}>
             {
                 openMobile ? <FaTimes className='text-black'/> : <FaBars/>
