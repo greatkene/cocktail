@@ -8,6 +8,12 @@
   body {
     @apply font-[Poppins];
   }
+  .navbar {
+    @apply flex justify-between py-4 md:px-24 px-4 z-[3] w-full fixed;
+  }
+  .navbar.active {
+    @apply flex justify-between py-4 md:px-24 px-4 bg-white z-[3] w-full fixed;
+  }
 }
 
 @layer utilities {
