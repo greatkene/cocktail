@@ -11,6 +11,15 @@
 }
 
 @layer utilities {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+  }
+  :root {
+    --heights: 50vh;
+    --width: 100%;
+  }
   ul li:hover {
     color: #3e82fc;
   }
