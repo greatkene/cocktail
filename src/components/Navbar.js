@@ -15,7 +15,7 @@ const Navbar = () => {
     navRef.current = navBackground
     useEffect(() => {
         const handleScroll = () => {
-            const show = window.screenY >= 40
+            const show = window.scrollY >= 40
             if (navRef.current !== show) {
                 setNavBackground(show)
             }
@@ -24,11 +24,11 @@ const Navbar = () => {
         return () => {
             document.removeEventListener('scroll', handleScroll)
         }
-    })
+    }, [])
 
   return (
     <nav className={navBackground ? 'navbar active' : 'navbar'} role='navigation'>
-        <img src={logo} alt="logo" className='h-16 cursor-pointer' />
+        <img src={logo} alt="logo" className='h-10 cursor-pointer' />
         <ul className='font-medium text-white text-lg md:flex hidden items-center gap-8 cursor-pointer'>
             <li>
                 <Link1 to="/" spy={true} smooth={true}>Home</Link1>
@@ -79,7 +79,8 @@ const Navbar = () => {
             </div>
         </ul>
 
-        <div className="md:hidden text-white my-4 text-2xl z-50 cursor-pointer" onClick={()=>setOpenMobile(!openMobile)}>
+        <div className={navBackground ? 'md:hidden text-black my-2 text-2xl z-50 cursor-pointer' :
+            'md:hidden text-white my-2 text-2xl z-50 cursor-pointer'} onClick={()=>setOpenMobile(!openMobile)}>
             {
                 openMobile ? <FaTimes className='text-black'/> : <FaBars/>
             }
