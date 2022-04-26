@@ -1,6 +1,7 @@
 import React from "react";
 import heroImg from "../../data";
 import {FiMoreVertical} from 'react-icons/fi';
+import ButtonFill from '../ButtonFill';
 
 function SliderContent({ activeIndex, sliderImage }) {
   return (
@@ -12,7 +13,6 @@ function SliderContent({ activeIndex, sliderImage }) {
         >
           <img className="slide-image" src={slide.image} alt="" />
           <h2 className="slide-title">{slide.text}</h2>
-         
         </div>
       ))}
     </section>

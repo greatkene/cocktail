@@ -4,6 +4,7 @@ import SliderContent from "./SliderContent";
 import Dots from './Dots'
 import './slider.css'
 
+
 const len = heroImg.length - 1;
 
 const Hero = () => {
@@ -19,6 +20,7 @@ const Hero = () => {
   return (
     <div className="slider-container">
       <SliderContent activeIndex={activeIndex} sliderImage={heroImg} />
+      
       <Dots
         activeIndex={activeIndex}
         sliderImage={heroImg}
