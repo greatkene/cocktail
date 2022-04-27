@@ -11,6 +11,7 @@ import Ticket from './pages/Ticket'
 
 // Import components
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/ticket' element={<Ticket/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }
