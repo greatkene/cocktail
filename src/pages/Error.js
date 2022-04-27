@@ -13,7 +13,7 @@ const Error = () => {
           </p> <br/>
           <ButtonFill>Back To Home</ButtonFill>
         </div>
-        <div className="flex-1 w-[300px] mx-20">
+        <div className="flex-1 w-[300px] mx-20 md:my-10 md:-mx-24 lg:mx-10 md:w-[600px]">
           <img src={ErrorImg} alt="error" />
         </div>
       </div>
