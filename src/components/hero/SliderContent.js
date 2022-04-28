@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import heroImg from "../../data";
 import {FiMoreVertical} from 'react-icons/fi';
