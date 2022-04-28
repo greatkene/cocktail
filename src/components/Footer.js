@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
         <div className="sm:flex sm:items-center sm:justify-between">
            <img src={logo} className='w-10' alt="logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap mx-auto ml-4 dark:text-white">Cocktaily</span> 
+            <span className="self-center text-2xl font-semibold whitespace-nowrap mx-auto ml-4 dark:text-white">Cocktaily</span> 
             <ul className='flex flex-wrap items-center mt-6 mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400'>
                 <li>
                     <Link to='/' className='mr-4 hover:underline md:mr-6'>About</Link>

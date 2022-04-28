@@ -1,9 +1,12 @@
 import React from 'react'
+import BreadCrumb from '../components/BreadCrumb'
 
 const About = () => {
   return (
-    <div>About</div>
-  )
+    <section>
+      <BreadCrumb>About</BreadCrumb>
+    </section>
+    )
 }
 
 export default About

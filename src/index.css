@@ -28,4 +28,11 @@
   ul li:hover {
     color: #3e82fc;
   }
+  .hero img {
+    height: 50vh;
+  }
+  .heading-container {
+    height: 65vh;
+    top: -50px;
+  }
 }

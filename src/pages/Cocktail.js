@@ -1,8 +1,11 @@
 import React from 'react'
+import BreadCrumb from '../components/BreadCrumb'
 
 const Cocktail = () => {
   return (
-    <div>Cocktail</div>
+    <section>
+      <BreadCrumb>Cocktail</BreadCrumb>
+    </section>
   )
 }
 
