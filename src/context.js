@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useContext, useEffect } from 'react'
 import { useCallback } from 'react'
 
@@ -13,7 +14,7 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ loading, cocktails, searchTerm, setSearchTerm }}
+      value={{ loading, cocktails, searchTerm, setSearchTerm, }}
     >
       {children}
     </AppContext.Provider>
