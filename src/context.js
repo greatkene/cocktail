@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useState, useContext, useEffect } from 'react'
 import { useCallback } from 'react'
@@ -47,7 +48,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     fetchDrinks()
-  }, [searchTerm])
+  }, [searchTerm, fetchDrinks])
   return (
     <AppContext.Provider
       value={{ loading, cocktails, setSearchTerm, }}
