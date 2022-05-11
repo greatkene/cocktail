@@ -14,9 +14,13 @@
   .navbar.active {
     @apply flex justify-between py-4 md:px-24 px-4 bg-white z-[3] w-full fixed;
   }
+  .btn {
+    @apply bg-[#29480a] hover:bg-green-700 text-white text-left font-medium py-2 px-4 border border-green-700 rounded;
+  }
 }
 
 @layer utilities {
+ 
   * {
     box-sizing: border-box;
     margin: 0;
@@ -48,9 +52,9 @@
     color: var(--primaryColor);
     text-indent: -9999em;
     margin: 88px auto;
-    margin-top: 20rem;
+    /* margin-top: 20rem; */
     position: relative;
-    font-size: 3rem;
+    font-size: 2rem;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
@@ -96,3 +100,5 @@
     }
   }
 }
+
+
