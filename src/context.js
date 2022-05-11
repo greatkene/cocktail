@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
 import React, { useState, useContext, useEffect } from 'react'
 import { useCallback } from 'react'
 
@@ -7,18 +5,18 @@ const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
-
   const [loading, setLoading] = useState(true)
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState('a')
   const [cocktails, setCocktails] = useState([])
 
-  const fetchDrinks = async () => {
+  const fetchDrinks = useCallback( async () => {
     setLoading(true)
-    try{
+    try {
       const response = await fetch(`${url}${searchTerm}`)
-      const data = await response.json();
-      const {drinks} = data;
-      if(drinks) {
+      const data = await response.json()
+      console.log(data);
+      const { drinks } = data
+      if (drinks) {
         const newCocktails = drinks.map((item) => {
           const {
             idDrink,
@@ -26,7 +24,8 @@ const AppProvider = ({ children }) => {
             strDrinkThumb,
             strAlcoholic,
             strGlass,
-          } = item;
+          } = item
+
           return {
             id: idDrink,
             name: strDrink,
@@ -44,14 +43,13 @@ const AppProvider = ({ children }) => {
       console.log(error)
       setLoading(false)
     }
-  }
-
+  },[searchTerm])
   useEffect(() => {
     fetchDrinks()
-  }, [searchTerm, fetchDrinks])
+  }, [searchTerm,fetchDrinks])
   return (
     <AppContext.Provider
-      value={{ loading, cocktails, setSearchTerm, }}
+      value={{ loading, cocktails, searchTerm, setSearchTerm }}
     >
       {children}
     </AppContext.Provider>
