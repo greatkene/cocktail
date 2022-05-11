@@ -8,7 +8,7 @@ const Cocktail = ({image, name, id, info, glass}) => {
             <img src={image} alt={name} />
         </div>
         <div className='px-6 py-4'>
-            <div className='font-bold  text-4xl mb-2'>{name}</div>
+            <div className='font-bold  text-3xl mb-2'>{name}</div>
             <h4 className='font-medium text-2xl mb-2'>{glass}</h4>
             <p className='text-gray-500 mb-4 text-base'>{info}</p>
             <Link to={`/cocktail/${id}`} className='btn'>

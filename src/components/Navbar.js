@@ -34,16 +34,16 @@ const Navbar = () => {
             : 'font-medium text-white text-lg md:flex hidden items-center gap-8 cursor-pointer'
         }>
             <li>
-                <Link1 to="/" spy={true} smooth={true}>Home</Link1>
+                <Link1 to="/" >Home</Link1>
             </li>
             <li>
                 <Link2 to="/about">About</Link2>
             </li>
             <li>
-                <Link1 to="attract" spy={true} smooth={true}>Attractions</Link1>
+                <Link1 to="attract" >Attractions</Link1>
             </li>
             <li>
-                <Link1 to="services" spy={true} smooth={true}>Services</Link1>
+                <Link1 to="services" >Services</Link1>
             </li>
             <li>
                 <Link2 to="/cocktail">Cocktail</Link2>
